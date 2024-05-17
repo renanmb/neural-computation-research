@@ -1,0 +1,89 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** -----------------------------------------------------------
+\documentclass{amsart}
+\usepackage{graphicx}
+\usepackage{fix-cm}
+\usepackage{amsmath, gauss}
+\usepackage{etoolbox}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{circuitikz}
+% This makes a command for Christoffel-Symbols
+\usepackage{relsize}
+\newcommand{\Christoffel}[2]{\ensuremath{{\mathlarger{\mathlarger\Gamma}}^{#1}\!\!\!_{#2}}}
+
+\begin{document}
+
+\title{Neural Computer\\{\bf Final Project}}%
+\author{Renan Monteiro Barbosa}%
+\date{05/16/2024}
+
+\maketitle
+\clearpage
+
+% Reference to Shagrir Begin
+% Shagrir 2022 p 240
+
+Use Shagrir book The Nature of Physical Computing to formalize Computing as Modelling.
+
+
+Sagrir proposes that computing is satisfied with modeling of the input-output type with some degree of morphism.
+
+Assuming that computing is a process of the physical system that transforms (physical) input variables into output variables, the mirroring condition is as follows:
+
+
+
+% Below is found at page 240
+
+A physical system P is a computing system just in case:
+
+\begin{enumerate}
+    % ---------------------------------------------------------------------------------
+    % 1-Input-Output Mirroring
+    % ---------------------------------------------------------------------------------
+    \item \textbf{Input-Output Mirroring}. The input-output function, g, of a given process in \textbf{P} preserves a certain relation, \underline{R}, in a target domain \textbf{T}: there is a mapping from \textbf{P} to \textbf{T} that maps g to \underline{R}, x to \underline{x}, y to \underline{y}, \dots , such that $g(x) = y$ iff $\left\langle \underline{x},\underline{y} \right\rangle\ \; \epsilon \; \underline{R}$. This means that g and \underline{R} share some formal relation \textbf{f}.
+    % ---------------------------------------------------------------------------------
+    % 2-Implementing
+    % ---------------------------------------------------------------------------------
+    \item \textbf{Implementing}. This process of \textbf{P}, whose input-output function is g, implements some formalism \textbf{S} whose input-output (abstract) function is \textbf{f}.
+    % ---------------------------------------------------------------------------------
+    % 3-Representing
+    % ---------------------------------------------------------------------------------
+    \item \textbf{Representing}. The input variables x of \textbf{P} represent the entities \underline{x} of \textbf{T}, and the output variables y of \textbf{P} represent the entities \underline{y} of \textbf{T}.
+    % ----------------------------------------------------------------
+\end{enumerate}
+
+The underlined italicized symbols (such as x and y) to signify properties of the target domain.
+
+% Reference to Shagrir End
+
+% Reference to Neural Manifolds — Linear Algebra and Topology in Neuroscience Begin
+% https://medium.com/bits-and-neurons/neural-manifolds-linear-algebra-and-topology-in-neuroscience-dde5a8181811
+
+% https://www.nature.com/articles/nature13665
+
+The paper Sadtler et. al. on Neural Manifolds cleverly establishes that neural activity is inherently constrained by properties of the physical network circuitry itself.
+
+These constraints result in neural activity patterns that comprise a low-dimensional subspace — the manifold — within the larger possible high-dimensional neural space.
+
+The authors relate this discovery to skill learning and adaptation
+
+% Reference to Neural Manifolds — Linear Algebra and Topology in Neuroscience End
+
+\clearpage
+
+Important terms
+
+metric tensor
+
+Levi-Civita connection
+
+Affine Connection
+
+Covariant Derivative
+
+Christoffel symbols $ \Christoffel{i}{jk} $
+
+\end{document}
+% ----------------------------------------------------------------
