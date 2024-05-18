@@ -1,0 +1,19 @@
+Step 
+Start by defining Computing as Modelling, essential step to prove that the architecture is capable of Computing.
+
+The conclusion is that modeling is an essential element of physical computation, at least in current computational approaches in cognitive neuroscience.
+
+It is crucial to distinguish between the notions of computational model and simulation on the one hand and computing-as-modeling on the other
+
+The computational model and simulation refer to the use of computers to model and simulate the behavior and processes of physical, biological, social, and other systems. They do not, however assume that modeling is an essential feature of computing; the claim is that computers can be, and are, used for modeling and simulating other phenomena.
+
+In contrast, the notion of computing-as-modeling is indifferent as to the actual use of computers for the purposes of modeling or simulating other phenomena; rather, the claim is that modeling is an essential element of the characterization of computing.
+
+
+Step 
+
+Introduce the neuroscience inspiration
+
+Step 
+
+Talk about the challenges in past models, lack of homomorphism
