@@ -17,3 +17,13 @@ Introduce the neuroscience inspiration
 Step 
 
 Talk about the challenges in past models, lack of homomorphism
+
+
+
+The text should start by introducing the concepts of Computing as Modelling
+As well it should borrow a lot of the proves from The paper Emergence of Universal Computations Through Neural Manifold Dynamics
+The paper makes the connection between Wilson-Cowan and Hopfield network to demonstrate that even a simplified low-rank representation is valid to capture the same dynamics of NNs
+once we go through the proof of equivalence and that this is indeed an Universal Turing Machine
+Expand to show that Hopfield NNs are part of a transformer and the ability of self-attention can be used with the Dynamics Flow
+This shows that any Computation can emerge from adjusting very simple parameters and the transformer will predict the next position
+It creates a flow capable of phase transitions thus moving across all the manifolds
