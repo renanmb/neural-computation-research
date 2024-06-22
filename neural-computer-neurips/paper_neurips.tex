@@ -110,7 +110,17 @@ Must note that, likewise Whittington \cite{whittington2021relating} mentions, we
 
 (Cite the DeepSpeed-Megatron, Zero, SLURM, Scaling Laws and Nvidia research on training large models)
 
-Additionally, we are exploiting this relationship by carefully crafting a modified transformers model so we can benefit from several engineering tools, techniques, softwares and hardware that have been matured and extensively tested given the popularity and widespread use of transformers. Further studies are required to develop and validate a better architecture that better represents Neural Population Dynamics.
+Additionally, we are exploiting this relationship by carefully crafting a modified transformers model so we can benefit from several technological advancements in how models are trained at scale ( \cite{DBLP:journals/corr/abs-1910-02054}, \cite{DBLP:journals/corr/abs-2201-11990}, \cite{DBLP:journals/corr/abs-2104-04473}, \cite{DBLP:journals/corr/abs-2001-08361} ), these advancements have been matured and extensively tested at production given the popularity and widespread use of transformers. Further studies are required to develop and validate a better architecture that better represents Neural Population Dynamics.
+
+% ZeRO: Memory Optimizations Towards Training Trillion Parameter Models \cite{DBLP:journals/corr/abs-1910-02054}
+
+% Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B \cite{DBLP:journals/corr/abs-2201-11990}
+
+% Efficient Large-Scale Language Model Training on GPU Clusters \cite{DBLP:journals/corr/abs-2104-04473}
+
+% Scaling Laws for Neural Language Models \cite{DBLP:journals/corr/abs-2001-08361}
+
+
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
@@ -129,33 +139,11 @@ Additionally, we are exploiting this relationship by carefully crafting a modifi
 % ⠀⠀⠈⠀⠀⠉⠀⠀⠀
 
 
-\subsection{Retrieval of style files}
+% \subsection{Retrieval of style files}
 
-The style files for NeurIPS and other conference information are available on the World Wide Web at  \url{http://www.neurips.cc/}. The file \verb+neurips_2019.pdf+ contains these instructions and illustrates the various formatting requirements your NeurIPS paper must satisfy.
+% The style files for NeurIPS and other conference information are available on the World Wide Web at  \url{http://www.neurips.cc/}. The file \verb+neurips_2019.pdf+ contains these instructions and illustrates the various formatting requirements your NeurIPS paper must satisfy.
 
-The only supported style file for NeurIPS 2019 is \verb+neurips_2019.sty+, rewritten for \LaTeXe{}. \textbf{Previous style files for \LaTeX{} 2.09,  Microsoft Word, and RTF are no longer supported!}
-
-% ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-% ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
-% ⠀⠀⠀⠀⠀⣴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⡀⠀⠀⠀⠀
-% ⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠞⠋⢙⣦⡈⣷⡄⠀⠀⠀
-% ⠀⣀⠶⠁⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⡴⠁⠀⠀⠿⢿⡟⣌⢿⠀⠀⠀
-% ⣠⡿⠀⢠⣜⠉⠀⠀⠙⢷⢄⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠘⡆⢧⡀⠀
-% ⣯⠃⠀⢾⣿⠗⠀⠀⠀⠀⡽⠀⠀⠀⠈⠳⢄⣀⠀⠀⠀⡰⠃⠘⣵⡄
-% ⡏⠀⠀⠘⡄⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⢱⡇
-% ⡅⠀⠀⠀⠙⠒⠔⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-% ⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⡗
-% ⡿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⣇
-% ⠹⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠷⣤⣤⣤⣤⠞⠁⠀⠀⠀⠀⠀⠀⣸
-% ⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠇
-% ⠀⠀⢇⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀
-% ⠀⠀⠈⠀⠀⠉⠀⠀⠀
-
-\subsection{Retrieval of style files}
-
-The style files for NeurIPS and other conference information are available on the World Wide Web at  \url{http://www.neurips.cc/}. The file \verb+neurips_2019.pdf+ contains these instructions and illustrates the various formatting requirements your NeurIPS paper must satisfy.
-
-The only supported style file for NeurIPS 2019 is \verb+neurips_2019.sty+, rewritten for \LaTeXe{}. \textbf{Previous style files for \LaTeX{} 2.09,  Microsoft Word, and RTF are no longer supported!}
+% The only supported style file for NeurIPS 2019 is \verb+neurips_2019.sty+, rewritten for \LaTeXe{}. \textbf{Previous style files for \LaTeX{} 2.09,  Microsoft Word, and RTF are no longer supported!}
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
@@ -173,11 +161,33 @@ The only supported style file for NeurIPS 2019 is \verb+neurips_2019.sty+, rewri
 % ⠀⠀⢇⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀
 % ⠀⠀⠈⠀⠀⠉⠀⠀⠀
 
-\subsection{Retrieval of style files}
+% \subsection{Retrieval of style files}
 
-The style files for NeurIPS and other conference information are available on the World Wide Web at  \url{http://www.neurips.cc/}. The file \verb+neurips_2019.pdf+ contains these instructions and illustrates the various formatting requirements your NeurIPS paper must satisfy.
+% The style files for NeurIPS and other conference information are available on the World Wide Web at  \url{http://www.neurips.cc/}. The file \verb+neurips_2019.pdf+ contains these instructions and illustrates the various formatting requirements your NeurIPS paper must satisfy.
 
-The only supported style file for NeurIPS 2019 is \verb+neurips_2019.sty+, rewritten for \LaTeXe{}. \textbf{Previous style files for \LaTeX{} 2.09,  Microsoft Word, and RTF are no longer supported!}
+% The only supported style file for NeurIPS 2019 is \verb+neurips_2019.sty+, rewritten for \LaTeXe{}. \textbf{Previous style files for \LaTeX{} 2.09,  Microsoft Word, and RTF are no longer supported!}
+
+% ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+% ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
+% ⠀⠀⠀⠀⠀⣴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⡀⠀⠀⠀⠀
+% ⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠞⠋⢙⣦⡈⣷⡄⠀⠀⠀
+% ⠀⣀⠶⠁⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⡴⠁⠀⠀⠿⢿⡟⣌⢿⠀⠀⠀
+% ⣠⡿⠀⢠⣜⠉⠀⠀⠙⢷⢄⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠘⡆⢧⡀⠀
+% ⣯⠃⠀⢾⣿⠗⠀⠀⠀⠀⡽⠀⠀⠀⠈⠳⢄⣀⠀⠀⠀⡰⠃⠘⣵⡄
+% ⡏⠀⠀⠘⡄⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⢱⡇
+% ⡅⠀⠀⠀⠙⠒⠔⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+% ⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⡗
+% ⡿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⣇
+% ⠹⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠷⣤⣤⣤⣤⠞⠁⠀⠀⠀⠀⠀⠀⣸
+% ⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠇
+% ⠀⠀⢇⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀
+% ⠀⠀⠈⠀⠀⠉⠀⠀⠀
+
+% \subsection{Retrieval of style files}
+
+% The style files for NeurIPS and other conference information are available on the World Wide Web at  \url{http://www.neurips.cc/}. The file \verb+neurips_2019.pdf+ contains these instructions and illustrates the various formatting requirements your NeurIPS paper must satisfy.
+
+% The only supported style file for NeurIPS 2019 is \verb+neurips_2019.sty+, rewritten for \LaTeXe{}. \textbf{Previous style files for \LaTeX{} 2.09,  Microsoft Word, and RTF are no longer supported!}
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
@@ -214,6 +224,30 @@ The computational model and simulation refer to the use of computers to model an
 In contrast, the notion of computing-as-modeling is indifferent as to the actual use of computers for the purposes of modeling or simulating other phenomena; rather, the claim is that modeling is an essential element of the characterization of computing.
 
 The conclusion is that modeling is an essential element of physical computation, at least in current computational approaches in cognitive neuroscience.
+
+
+
+At the book Shagrir - The Nature of Physical Computation \cite{shagrir2022nature}
+
+A physical system P is a computing system just in case:
+
+\begin{enumerate}
+    % ---------------------------------------------------------------------------------
+    % 1-Input-Output Mirroring
+    % ---------------------------------------------------------------------------------
+    \item \textbf{Input-Output Mirroring}. The input-output function, g, of a given process in \textbf{P} preserves a certain relation, \underline{R}, in a target domain \textbf{T}: there is a mapping from \textbf{P} to \textbf{T} that maps g to \underline{R}, x to \underline{x}, y to \underline{y}, \dots , such that $g(x) = y$ iff $\left\langle \underline{x},\underline{y} \right\rangle\ \; \epsilon \; \underline{R}$. This means that g and \underline{R} share some formal relation \textbf{f}.
+    % ---------------------------------------------------------------------------------
+    % 2-Implementing
+    % ---------------------------------------------------------------------------------
+    \item \textbf{Implementing}. This process of \textbf{P}, whose input-output function is g, implements some formalism \textbf{S} whose input-output (abstract) function is \textbf{f}.
+    % ---------------------------------------------------------------------------------
+    % 3-Representing
+    % ---------------------------------------------------------------------------------
+    \item \textbf{Representing}. The input variables x of \textbf{P} represent the entities \underline{x} of \textbf{T}, and the output variables y of \textbf{P} represent the entities \underline{y} of \textbf{T}.
+    % ----------------------------------------------------------------
+\end{enumerate}
+
+The underlined italicized symbols (such as x and y) to signify properties of the target domain.
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
@@ -279,6 +313,45 @@ The far left panel is a simbplyfied cartoon depiction of a grid cell’s firing 
 %   \caption{Example of single image}
 %   \label{image1}
 % \end{figure}
+
+
+
+
+% ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+% ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
+% ⠀⠀⠀⠀⠀⣴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⡀⠀⠀⠀⠀
+% ⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠞⠋⢙⣦⡈⣷⡄⠀⠀⠀
+% ⠀⣀⠶⠁⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⡴⠁⠀⠀⠿⢿⡟⣌⢿⠀⠀⠀
+% ⣠⡿⠀⢠⣜⠉⠀⠀⠙⢷⢄⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠘⡆⢧⡀⠀
+% ⣯⠃⠀⢾⣿⠗⠀⠀⠀⠀⡽⠀⠀⠀⠈⠳⢄⣀⠀⠀⠀⡰⠃⠘⣵⡄
+% ⡏⠀⠀⠘⡄⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⢱⡇
+% ⡅⠀⠀⠀⠙⠒⠔⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+% ⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⡗
+% ⡿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⣇
+% ⠹⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠷⣤⣤⣤⣤⠞⠁⠀⠀⠀⠀⠀⠀⣸
+% ⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠇
+% ⠀⠀⢇⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀
+% ⠀⠀⠈⠀⠀⠉⠀⠀⠀
+
+% #########################################################################################
+% #########################################################################################
+% Conclusion
+% #########################################################################################
+% #########################################################################################
+\section{Conclusions}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+\section{experimenting with Editing}
+
+Advancements in the last few decades have brought us to a point at which what was thought to only be theorized by Tolman in 1948 \cite{tolman1948cognitive} as he argued that for Humans and other animals to make complex inferences from sparse observations and rapidly integrate new knowledge to control their behavior there should exist a systematic organization of such knowledge on what could be called a cognitive map. (note, try to make it sound like the theory of computing)
+
+But what was missing from these early studies, was a way to address the neuronal mechanisms that led information to be stored as memory. Further development has shown that place cells are part of a wider network of spatially modulated neurons, including grid, border, and head direction cells, each with distinct roles in the representation of space and spatial memory.
+
+Bringing to surface a mechanistic basis for memory formation (Nobel prize winning Place Cells, Grid Cells, and Memory) which later has been suggested that relational memory and spatial reasoning might be related by a common mechanism (Eichenbaum and Cohen, 2014 \cite{eichenbaum2014can}).
+
+\cite{beiran2023parametric}
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
@@ -397,42 +470,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor inci
   \end{tabular}
 \end{table}
 
-% ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-% ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
-% ⠀⠀⠀⠀⠀⣴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⡀⠀⠀⠀⠀
-% ⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠞⠋⢙⣦⡈⣷⡄⠀⠀⠀
-% ⠀⣀⠶⠁⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⡴⠁⠀⠀⠿⢿⡟⣌⢿⠀⠀⠀
-% ⣠⡿⠀⢠⣜⠉⠀⠀⠙⢷⢄⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠘⡆⢧⡀⠀
-% ⣯⠃⠀⢾⣿⠗⠀⠀⠀⠀⡽⠀⠀⠀⠈⠳⢄⣀⠀⠀⠀⡰⠃⠘⣵⡄
-% ⡏⠀⠀⠘⡄⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⢱⡇
-% ⡅⠀⠀⠀⠙⠒⠔⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-% ⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⡗
-% ⡿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⣇
-% ⠹⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠷⣤⣤⣤⣤⠞⠁⠀⠀⠀⠀⠀⠀⣸
-% ⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠇
-% ⠀⠀⢇⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀
-% ⠀⠀⠈⠀⠀⠉⠀⠀⠀
 
-% #########################################################################################
-% #########################################################################################
-% Conclusion
-% #########################################################################################
-% #########################################################################################
-\section{Conclusions}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-\section{experimenting with Editing}
-
-Advancements in the last few decades have brought us to a point at which what was thought to only be theorized by Tolman in 1948 \cite{tolman1948cognitive} as he argued that for Humans and other animals to make complex inferences from sparse observations and rapidly integrate new knowledge to control their behavior there should exist a systematic organization of such knowledge on what could be called a cognitive map. (note, try to make it sound like the theory of computing)
-
-But what was missing from these early studies, was a way to address the neuronal mechanisms that led information to be stored as memory. Further development has shown that place cells are part of a wider network of spatially modulated neurons, including grid, border, and head direction cells, each with distinct roles in the representation of space and spatial memory.
-
-Bringing to surface a mechanistic basis for memory formation (Nobel prize winning Place Cells, Grid Cells, and Memory) which later has been suggested that relational memory and spatial reasoning might be related by a common mechanism (Eichenbaum and Cohen, 2014 \cite{eichenbaum2014can}).
-
-
-\cite{beiran2023parametric}
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
