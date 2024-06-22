@@ -33,7 +33,7 @@
 
 \usepackage{cite}
 
-\title{The Ghost in the Machine: Emergence of Computation in CW-complexes}
+\title{The Ghost in the Machine: Emergence of Computation through dynamics in CW-complexes}
 % \title{TEM-t as The Universal Neural Computer}
 
 % The \author macro works with any number of authors. There are two commands
@@ -81,17 +81,12 @@ Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.
 
 \section{Introduction}
 
-Advancements in the last few decades have brought us to a point at which what was thought to only be theorized by Tolman in 1948 \cite{tolman1948cognitive} as he argued that for Humans and other animals to make complex inferences from sparse observations and rapidly integrate new knowledge to control their behavior there should exist a systematic organization of such knowledge on what could be called a cognitive map. (note, try to make it sound like the theory of computing)
+Idea of papers to cite, that demonstrate progress in how we record and map neurons.
 
-But what was missing from these early studies, was a way to address the neuronal mechanisms that led information to be stored as memory. Further development has shown that place cells are part of a wider network of spatially modulated neurons, including grid, border, and head direction cells, each with distinct roles in the representation of space and spatial memory.
-
-Bringing to surface a mechanistic basis for memory formation (Nobel prize winning Place Cells, Grid Cells, and Memory) which later has been suggested that relational memory and spatial reasoning might be related by a common mechanism (Eichenbaum and Cohen, 2014 \cite{eichenbaum2014can}).
-
-
-\cite{beiran2023parametric}
-
+Advances in two-photon calcium imaging in larval zebrafish (Ahrens et al. 2012, Andalman et al. 2019, Naumann et al. 2016, Portugues et al. 2014), Drosophila (Kim et al. 2017 \cite{kim2017ring} ), rodents (Allen et al. 2019, Chaudhuri et al. 2019, Stringer et al. 2019), and Caenorhabditis elegans (Kato et al. 2015, Nichols et al. 2017), as well as high channel count electrophysiology via NeuroPixels (e.g., Jun et al. 2017, Stringer et al. 2019, Trautmann et al. 2019), have enabled measuring and manipulating neural activity at unprecedented scale. We believe these technologies will present new opportunities to test the CTD framework.
 
 (Must do a paper dump showcasing some advancements)
+
 In the last few decades we have seen many advancements in neuroscience. It is now possible to record activity from every neuron in a zebrafish larva’s brain while it is freely swimming and responding to stimuli Kim et al. 2017 \cite{kim2017pan}. We have a nearly complete map of one hemisphere of the fly brain, with every neuron and most of its synapses accounted for (Pipkin 2020 \cite{pipkin2020mapping}). The neurons responsible for a mouse’s memory of an event can be recorded, tagged, and replayed by laser stimulation, causing the mouse to behave as if the event had happened again (CarrilloReid et al. 2019 \cite{carrillo2019controlling}; Ramirez et al. 2013 \cite{ramirez2013creating}).
 
 Such advancements brought to light evidence for what was once only a theory, for example, Tolman in 1948 \cite{tolman1948cognitive} argued that for Humans and other animals to make complex inferences from sparse observations and rapidly integrate new knowledge to control their behavior there should exist a systematic organization of such knowledge on what could be called a cognitive map. 
@@ -112,6 +107,9 @@ There is growing evidence to support that manifolds maintain a well-preserved co
 In this paper we want to show that there exists a morphism between Neuroscience models and existing NN models, so we can approximately represent the Neural Manifolds with the Transformers.
 
 Must note that, likewise Whittington \cite{whittington2021relating} mentions, we are not saying the brain is closely related to transformers, instead we are using a mathematical relationship between the so popular transformers and the attractor neural networks that have been carefully formulated in neuroscience models as being an essential piece in forming invariant representations in a topological structure that facilitates the emergence of Computation Through Neural Population Dynamics.
+
+(Cite the DeepSpeed-Megatron, Zero, SLURM, Scaling Laws and Nvidia research on training large models)
+
 Additionally, we are exploiting this relationship by carefully crafting a modified transformers model so we can benefit from several engineering tools, techniques, softwares and hardware that have been matured and extensively tested given the popularity and widespread use of transformers. Further studies are required to develop and validate a better architecture that better represents Neural Population Dynamics.
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -207,6 +205,48 @@ The only supported style file for NeurIPS 2019 is \verb+neurips_2019.sty+, rewri
 
 Computing is not a new concept, there is historical evidence that the Greeks were already capable of performing computation to predict the astronomical movements giving a programmable input (Antikythera mechanism).
 
+Start by defining Computing as Modelling, essential step to prove that the architecture is capable of Computing.
+
+It is crucial to distinguish between the notions of computational model and simulation on the one hand and computing-as-modeling on the other
+
+The computational model and simulation refer to the use of computers to model and simulate the behavior and processes of physical, biological, social, and other systems. They do not assume that modeling is an essential feature of computing; However, the claim is that computers can be, and are, used for modeling and simulating other phenomena.
+
+In contrast, the notion of computing-as-modeling is indifferent as to the actual use of computers for the purposes of modeling or simulating other phenomena; rather, the claim is that modeling is an essential element of the characterization of computing.
+
+The conclusion is that modeling is an essential element of physical computation, at least in current computational approaches in cognitive neuroscience.
+
+% ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+% ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
+% ⠀⠀⠀⠀⠀⣴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⡀⠀⠀⠀⠀
+% ⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠞⠋⢙⣦⡈⣷⡄⠀⠀⠀
+% ⠀⣀⠶⠁⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⡴⠁⠀⠀⠿⢿⡟⣌⢿⠀⠀⠀
+% ⣠⡿⠀⢠⣜⠉⠀⠀⠙⢷⢄⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠘⡆⢧⡀⠀
+% ⣯⠃⠀⢾⣿⠗⠀⠀⠀⠀⡽⠀⠀⠀⠈⠳⢄⣀⠀⠀⠀⡰⠃⠘⣵⡄
+% ⡏⠀⠀⠘⡄⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⢱⡇
+% ⡅⠀⠀⠀⠙⠒⠔⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+% ⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠀⠀⠀⠀⠀⠀⠀⡗
+% ⡿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⣇
+% ⠹⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠷⣤⣤⣤⣤⠞⠁⠀⠀⠀⠀⠀⠀⣸
+% ⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠇
+% ⠀⠀⢇⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡏⠀
+% ⠀⠀⠈⠀⠀⠉⠀⠀⠀
+
+% #########################################################################################
+% #########################################################################################
+% Why CW-complexes?
+% #########################################################################################
+% #########################################################################################
+
+\section{Why CW-complexes?}
+
+The far left panel is a simbplyfied cartoon depiction of a grid cell’s firing pattern in a two-dimensional environment. Making a cut through the center of four fields provides a diamond shape (second panel), which comprises the base unit. The dashed whiteline illustrates running the “longdistance” in the diamond between the furthest two fields. By connecting the bottom edge to the top edge, two “half-fields” are generated (third panel) which becomes a single field when connecting the opened ends (far right panel). Note that there are three lines on the completed torus. The dashed black lines represent the original cuts along made in the first panel. The white line resembles the trajectory necessary to connect the two furthest points in the diamond. Note that it makes one revolution per rotation. That is, the trajectory travels through the interior of the torus as well as along the exterior.
+
+\begin{figure}[H]
+    \centering{\includegraphics[width=150mm]{images/figure_grid-cell+to+torus.png}}
+    \caption{Schematic depiction of why grid cells map to a torus.}
+    \label{image1}
+\end{figure}
+
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⣴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⡀⠀⠀⠀⠀
@@ -229,16 +269,16 @@ Computing is not a new concept, there is historical evidence that the Greeks wer
 % #########################################################################################
 % #########################################################################################
 
-\section{Single image}
+% \section{Single image}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fig.~\ref{image1} shows the NeurIPS logo.
+% Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Fig.~\ref{image1} shows the NeurIPS logo.
 
 
-\begin{figure}[H]
-  \centering{\includegraphics[width=40mm]{images/logo-neurips.png}}
-  \caption{Example of single image}
-  \label{image1}
-\end{figure}
+% \begin{figure}[H]
+%   \centering{\includegraphics[width=40mm]{images/logo-neurips.png}}
+%   \caption{Example of single image}
+%   \label{image1}
+% \end{figure}
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
@@ -381,6 +421,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor inci
 \section{Conclusions}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+\section{experimenting with Editing}
+
+Advancements in the last few decades have brought us to a point at which what was thought to only be theorized by Tolman in 1948 \cite{tolman1948cognitive} as he argued that for Humans and other animals to make complex inferences from sparse observations and rapidly integrate new knowledge to control their behavior there should exist a systematic organization of such knowledge on what could be called a cognitive map. (note, try to make it sound like the theory of computing)
+
+But what was missing from these early studies, was a way to address the neuronal mechanisms that led information to be stored as memory. Further development has shown that place cells are part of a wider network of spatially modulated neurons, including grid, border, and head direction cells, each with distinct roles in the representation of space and spatial memory.
+
+Bringing to surface a mechanistic basis for memory formation (Nobel prize winning Place Cells, Grid Cells, and Memory) which later has been suggested that relational memory and spatial reasoning might be related by a common mechanism (Eichenbaum and Cohen, 2014 \cite{eichenbaum2014can}).
+
+
+\cite{beiran2023parametric}
 
 % ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 % ⠀⠀⠀⠀⠀⠀⢀⣠⠤⠖⠈⠉⠉⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀
