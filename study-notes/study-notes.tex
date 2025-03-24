@@ -1,0 +1,100 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** -----------------------------------------------------------
+\documentclass{amsart}
+\usepackage{graphicx}
+\usepackage{fix-cm}
+\usepackage{amsmath, gauss}
+\usepackage{etoolbox}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{circuitikz}
+% This makes a command for Christoffel-Symbols
+\usepackage{relsize}
+\newcommand{\Christoffel}[2]{\ensuremath{{\mathlarger{\mathlarger\Gamma}}^{#1}\!\!\!_{#2}}}
+
+\begin{document}
+
+% ############################################
+% Figuring out Title Formatting and Abstract
+% ############################################
+
+% \title{Neural Computer\\{\bf Final Project}}%
+% \author{Renan Monteiro Barbosa}%
+% \date{05/16/2024}
+
+% \maketitle
+% \clearpage
+
+\thispagestyle{plain}
+\begin{center}
+    \Large
+    \textbf{Neural Computer}
+        
+    \vspace{0.4cm}
+    \large
+    Thesis Subtitle
+        
+    \vspace{0.4cm}
+    \textbf{Renan Monteiro Barbosa}
+       
+    \vspace{0.9cm}
+    \textbf{Abstract}
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Turpis egestas pretium aenean pharetra magna ac placerat vestibulum. 
+
+\end{center}
+
+% ############################################
+% End of Figuring out Title Formatting and Abstract
+% ############################################
+
+\clearpage
+
+% ############################################
+% Brain as a Dynamical System:
+% ############################################
+
+% Inspired by:
+% Hidden Beauty Behind Generative AI
+% https://www.youtube.com/watch?v=laaBLUxJUMY
+
+Implementing some equations that repreent the Brain as a Dynamical System:
+
+Latent factor $Z -> X [T S C]$ Observation
+
+The distribution of x is compatible with the sampled Z
+
+$P(x|z)$  -- P of x given z conditional probablity
+
+This is Bayesian
+
+The joint probability of x and z occuring togehter equals the probability of Z and x given z
+
+$P(x,z) = P(z) \cdot P(x|z) $
+
+It is important to note how we can parametrize this probability by leveragin a distribution and rely on the mean field theory.
+
+$P(x) = \frac{1}{\sigma\sqrt{2\pi}}$
+
+
+
+Isotropic Gaussian
+
+minimize the KL divergence
+
+$D_{KL}[P(x) || P_{\theta}(x)] = \sum\limits_{x}^{states}P(x)\cdot \log\frac{P(x)}{P_{\theta}(x)}$
+
+maximize the expected log probability
+
+$\sum\limits_{x}^{states}P(x)\cdot \log P_{\theta}(x) $
+
+
+
+
+\clearpage
+
+
+\end{document}
+% ----------------------------------------------------------------
