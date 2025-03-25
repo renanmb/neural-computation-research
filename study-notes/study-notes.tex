@@ -92,6 +92,19 @@ $\sum\limits_{x}^{states}P(x)\cdot \log P_{\theta}(x) $
 
 
 
+Variational Inference
+
+There is a network which is trained to learnt he Variational distribution
+
+variational distribution: $Q_{\theta}(z|x)$
+
+This is also referenced in the Free energy as the recognition model
+
+$P_{\theta}(x) = \sum\limits_{z}P_{\theta}(x|z)\frac{P_{\theta}(z)}{Q_{\theta}(z|x)}Q_{\theta}(z|x) $
+
+Sampling Correction $\frac{P_{\theta}(z)}{Q_{\theta}(z|x)}$
+
+
 
 \clearpage
 
