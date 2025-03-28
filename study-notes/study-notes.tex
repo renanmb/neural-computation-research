@@ -78,9 +78,9 @@ It is important to note how we can parametrize this probability by leveragin a d
 
 $P(x) = \frac{1}{\sigma\sqrt{2\pi}}$
 
+\vspace{0.4 cm}
 
-
-Isotropic Gaussian
+Isotropic Gaussian \vspace{0.2 cm}
 
 minimize the KL divergence
 
@@ -90,11 +90,24 @@ maximize the expected log probability
 
 $\sum\limits_{x}^{states}P(x)\cdot \log P_{\theta}(x) $
 
+\vspace{0.4 cm}
+
+Important Sampling \vspace{0.2 cm}
+
+Importance sampling is a variance reduction technique that can be used in the Monte Carlo method. 
 
 
-Variational Inference
+Example using the trees
 
-There is a network which is trained to learnt he Variational distribution
+1) Measure 50-50 from both regions
+
+2) Corect for non-uniform Sampling
+
+\vspace{0.4 cm}
+
+Variational Inference \vspace{0.2 cm}
+
+There is a network which is trained to learn the Variational distribution
 
 variational distribution: $Q_{\theta}(z|x)$
 
@@ -103,6 +116,12 @@ This is also referenced in the Free energy as the recognition model
 $P_{\theta}(x) = \sum\limits_{z}P_{\theta}(x|z)\frac{P_{\theta}(z)}{Q_{\theta}(z|x)}Q_{\theta}(z|x) $
 
 Sampling Correction $\frac{P_{\theta}(z)}{Q_{\theta}(z|x)}$
+
+\vspace{0.4 cm}
+
+ELBO - Evidence Lower Bound \vspace{0.2 cm}
+
+In variational Bayesian methods, the evidence lower bound (often abbreviated ELBO, also sometimes called the variational lower bound[1] or negative variational free energy) is a useful lower bound on the log-likelihood of some observed data. \vspace{0.2 cm}
 
 
 
@@ -120,6 +139,9 @@ Sampling Correction $\frac{P_{\theta}(z)}{Q_{\theta}(z|x)}$
 
 % A Universal Theory of Brain Function
 % https://www.youtube.com/watch?v=iPj9D9LgK2A&t=664s
+
+% Information Theory, Lecture 1: Defining Entropy and Information - Oxford Mathematics 3rd Yr Lecture
+% https://www.youtube.com/watch?v=ScX2aBFyrVU
 
 \end{document}
 % ----------------------------------------------------------------
