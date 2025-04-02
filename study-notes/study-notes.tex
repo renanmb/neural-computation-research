@@ -92,7 +92,7 @@ $\sum\limits_{x}^{states}P(x)\cdot \log P_{\theta}(x) $
 
 \vspace{0.4 cm}
 
-Important Sampling \vspace{0.2 cm}
+\textbf{Importance Sampling} \vspace{0.2 cm}
 
 Importance sampling is a variance reduction technique that can be used in the Monte Carlo method. 
 
@@ -105,7 +105,7 @@ Example using the trees
 
 \vspace{0.4 cm}
 
-Variational Inference \vspace{0.2 cm}
+\textbf{Variational Inference} \vspace{0.2 cm}
 
 There is a network which is trained to learn the Variational distribution
 
@@ -119,11 +119,117 @@ Sampling Correction $\frac{P_{\theta}(z)}{Q_{\theta}(z|x)}$
 
 \vspace{0.4 cm}
 
-ELBO - Evidence Lower Bound \vspace{0.2 cm}
+\textbf{ELBO - Evidence Lower Bound} \vspace{0.2 cm}
 
 In variational Bayesian methods, the evidence lower bound (often abbreviated ELBO, also sometimes called the variational lower bound[1] or negative variational free energy) is a useful lower bound on the log-likelihood of some observed data. \vspace{0.2 cm}
 
+Minimizig the KL = Maximizing the ELBO \vspace{0.2 cm}
 
+Variational Free Energy := $\mathbb{E}[\log q(z)] - \mathbb{E}[\log p(x|z)p(z)]$ \vspace{0.2 cm}
+
+ELBO := $\mathbb{E}[\log p(x|z)p(z)] - \mathbb{E}[\log q(z)]$ \vspace{0.2 cm}
+
+\vspace{1 cm}
+
+\clearpage
+
+% ##################################################################
+% ##################################################################
+% Variational Autoencoder
+% ##################################################################
+% ##################################################################
+
+% from video
+% Variational Autoencoder - Model, ELBO, loss function and maths explained easily!
+% https://www.youtube.com/watch?v=iwEzwTTalbg
+
+\textbf{Math Concepts} \vspace{0.2 cm}
+
+\textbf{Expectation of a random variable} \vspace{0.2 cm}
+
+% \,dx dont know what the \, is doing
+$\mathbb{E}[f(x)] = \int xf(x)\,dx$ \vspace{0.2 cm}
+
+\textbf{Chain rule of probability} \vspace{0.2 cm}
+
+$P(x,y) = P(x|y)P(y)$ \vspace{0.2 cm}
+
+\textbf{Bayes' Theorem} \vspace{0.2 cm}
+
+$P(x|y) = \frac{P(y|x)P(x)}{P(y)}$ \vspace{0.2 cm}
+
+\vspace{1 cm}
+
+\textbf{Kullback-Leibler Divergence} \vspace{0.2 cm}
+
+The \textbf{Kullback-Leibler Divergence} is a measure of the difference between two probability distributions, quantifying how much one distribution diverges from another. \vspace{0.2 cm}
+
+$D_{KL}(P \parallel Q) = \int p(x)log\left( \frac{p(x)}{q(x)} \right)\,dx$ \vspace{0.2 cm}
+
+Properties: \vspace{0.2 cm}
+
+\begin{itemize}
+    \item Not symmetric
+    \item Always $ \geq 0$
+    \item It is equal to 0 if and only if P = Q
+\end{itemize}
+
+\vspace{0.2 cm}
+
+Deriving the ELBO \vspace{0.2 cm}
+
+This is the log likelihood of our data:
+
+$\log p_{\theta}(x) = \log p_{\theta}(x)$ \vspace{0.2 cm}
+
+Now multiply by 1: $\log p_{\theta}(x) = \log p_{\theta}(x) \int q_{\phi}(z|x)\,dz $ \vspace{0.2 cm}
+
+Bring inside the integral: $\log p_{\theta}(x) = \int \log p_{\theta}(x)  q_{\phi}(z|x)\,dz $ \vspace{0.2 cm}
+
+Definition of Expectation: $\log p_{\theta}(x) = \mathbb{E}_{q_{\phi}(z|x)}[\log p_{\theta}(x)]$ \vspace{0.2 cm}
+
+Apply the equation $p_{\theta}(x) = \frac{p_{\theta}(x,z)}{p_{\theta}(z|x)}$ \vspace{0.2 cm}
+
+$\log p_{\theta}(x) = \mathbb{E}_{q_{\phi}(z|x)}\left[\frac{p_{\theta}(x,z)}{p_{\theta}(z|x)}\right]$ \vspace{0.2 cm}
+
+Multiply by 1 \vspace{0.2 cm}
+
+$\log p_{\theta}(x) = \mathbb{E}_{q_{\phi}(z|x)}\left[\frac{p_{\theta}(x,z)}{p_{\theta}(z|x)} \cdot \frac{q_{\phi}(z|x)}{q_{\phi}(z|x)}\right]$ \vspace{0.2 cm}
+
+Split the Expectation \vspace{0.2 cm}
+
+$\log p_{\theta}(x) = \mathbb{E}_{q_{\phi}(z|x)}\left[\frac{p_{\theta}(x,z)}{q_{\phi}(z|x)}\right] + \mathbb{E}_{q_{\phi}(z|x)}\left[\frac{q_{\phi}(z|x)}{p_{\theta}(z|x)}\right] $ \vspace{0.2 cm}
+
+Definition of KL divergence: \vspace{0.2 cm}
+
+$\log p_{\theta}(x) = \mathbb{E}_{q_{\phi}(z|x)}\left[\frac{p_{\theta}(x,z)}{q_{\phi}(z|x)}\right] + D_{KL}\left(q_{\phi}(z|x) \parallel p_{\theta}(z|x)\right) $ \vspace{0.2 cm}
+
+Remember that $D_{KL} \geq 0$  \vspace{0.2 cm}
+
+\[\log p_{\theta}(x) = \underbrace{\mathbb{E}_{q_{\phi}(z|x)}\left[\frac{p_{\theta}(x,z)}{q_{\phi}(z|x)}\right]}_{\text{ELBO}} + \underbrace{D_{KL}\left(q_{\phi}(z|x) \parallel p_{\theta}(z|x)\right)}_{\text{$\geq 0$}}\]
+
+% \[x = \underbrace{f(y)}_{\text{resistance}} + \underbrace{g(y)}_{\text{gravity}}\]
+
+We can deduce that \vspace{0.2 cm}
+
+$\log p_{\theta}(x) \geq \mathbb{E}_{q_{\phi}(z|x)}\left[\frac{p_{\theta}(x,z)}{q_{\phi}(z|x)}\right]$ \vspace{0.2 cm}
+
+because the ELBO is the lower bound log likelihood of our data, so if we want to maximize the log likelihood we will be maximizing the ELBO at the same time. \vspace{0.2 cm}
+
+
+Maximizing the ELBO means:
+
+\begin{itemize}
+    \item Maximizing the first term: Maximizing the reconstruction likelihood of the decoder
+    \item Minimizing the second term: Minimizing the distance between the leanred dsitribution and the prior belief we have over the latent variable. 
+\end{itemize}
+
+% Reference:
+% Kingma, D/P. and Welling, M., 2019. An Introduction to variational autoencoders. Foundations and Trends in Machine Learning, 12(4), pp.307-392.
+
+\begin{figure}[h]
+    \includegraphics[width=0.8\linewidth]{images/ELBO-1.PNG}
+\end{figure}
 
 \clearpage
 
