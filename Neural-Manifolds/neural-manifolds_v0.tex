@@ -900,6 +900,99 @@ Need to extend the Approximate Bayesian Computation (ABC)
 
 % #########################################################################################
 % #########################################################################################
+% Slide XX - Path Integral
+% #########################################################################################
+% #########################################################################################
+
+\section{Path Integral}
+\begin{frame}
+\frametitle{Path Integral}
+
+Take the idea of the Feynman's path integral as inspiration.
+
+$A = e^{i \phi}$
+
+$\Delta \phi = \frac{2 \pi}{\lambda}\Delta x - 2\pi f \Delta t$
+
+$A = e^{i \sum \Delta \phi} = e^{i \sum \frac{2 \pi}{\lambda}\Delta x -2 \pi f \Delta t}$
+
+de Broile: $\lambda = \frac{h}{mv}$, Einstein-Planck: $E = hf -> f = \frac{E}{h}$, Simplified Planck Constant $\hbar = \frac{h}{2\pi}$
+
+$A = e^{i \sum \frac{2\pi mv}{h} \Delta x -2\pi \frac{E}{h} \Delta t}$
+
+$A = e^{i \frac{\sum mv \Delta x - E \Delta t}{\hbar}}$
+
+$A = e^{i \frac{\sum \left( mv \frac{\Delta x}{\Delta t} - E\right) \Delta t}{\hbar}}$
+
+For a very small $\Delta t$:
+
+$A = e^{i \frac{\int \left( mv \frac{d x}{d t} - E\right) d t}{\hbar}}$
+
+$mv \frac{d x}{d t} = mv^{2}$ and $E = T + V = \frac{1}{2} mv^{2} + V$
+
+
+\end{frame}
+
+% #########################################################################################
+% #########################################################################################
+% Slide XX - Path Integral
+% #########################################################################################
+% #########################################################################################
+
+\section{Path Integral}
+\begin{frame}
+\frametitle{Path Integral}
+
+$A = e^{i \frac{\int \left( mv^{2} -\frac{1}{2} mv^{2} - V\right) d t}{\hbar}}$
+
+$A = e^{i \frac{\int \left( \frac{1}{2} mv^{2} - V\right) d t}{\hbar}}$
+
+Classical Action: $S = \int \left( \frac{1}{2} mv^{2} - V\right) d t$ therefore $A = e^{i \frac{S}{\hbar}}$
+
+$A = e^{i \frac{S}{\hbar}}$ given $\hbar \approx 10^{-34} J \cdot s$
+
+$dS = S[q] - S[p] = 0$
+
+So the path chosen is the path of least action which is the path where all phases interfere cosntructively.
+
+If you observe closely this resembles the Lagrangian.
+
+$S = \int_{t_{1}}^{t_{2}} \left(T - V\right)dt = \int_{t_{1}}^{t_{2}} Ldt$
+
+T being kinect energy and V being potential energy.
+
+\end{frame}
+
+% #########################################################################################
+% #########################################################################################
+% Slide XX - Path Integral
+% #########################################################################################
+% #########################################################################################
+
+\section{Path Integral}
+\begin{frame}
+\frametitle{Path Integral}
+
+Lagrangian Examples
+
+Classical mechanics: $L_{CM} = T - V$
+
+Special relativity $L_{SR} = -mc^{2} \sqrt{1 - \frac{v^{2}}{c^{2}}}$
+
+% https://physics.stackexchange.com/questions/755822/what-is-the-full-qed-lagrangian-with-physics-units-written-out
+
+% https://mathworld.wolfram.com/MinkowskiMetric.html
+
+Electrodynamics $L_{EM} = -1\frac{1}{4} F^{\mu \nu}F_{\mu \nu} + \frac{1}{c} j_{\mu}A_{\mu}$
+
+% TODO - need to properly write the General Relativity and QED
+
+General Relativity $L_{GR} = -mc^{2} \sqrt{-c^{2}g_{\mu \nu}}$
+
+\end{frame}
+
+% #########################################################################################
+% #########################################################################################
 % #########################################################################################
 % #########################################################################################
 
